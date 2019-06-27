@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Lato&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="container">
+
+
+    <div class="title">
+        <a href="/warehouse">
+        <div id="logo">
+            <h1>Magazyn Elektryczny</h1>
+        </div></a>
+        <div id="date">
+            <h1>12:00</h1>
+        </div>
+
+
+    </div>
+
+    <div class="content">
+        <div th:if="${info!=null}" th:text="${info}" >
+            <br/>
+        </div>
+        <center>
+            <br/>
+            <a href="/warehouse/show">
+                <div class="choice">
+                    <h3>Pokaż stan</h3>
+                </div>
+            </a>
+            <div id="tiles" th:if="${show}==true">
+
+                <div class="tile">
+                    Kable
+                </div>
+                <div class="tile">
+                    Trasy
+                </div>
+                <div class="tile">
+                    Złączki
+                </div>
+                <div class="tile">
+                    Pokaż wszystko
+                </div>
+                <br/>
+
+            </div>
+
+
+            <br/>
+            <a href="/warehouse/add">
+            <div class="choice" style="clear: both">
+                <h3>Dodaj elementy</h3>
+            </div></a>
+
+            <div id="tiles2" th:if="${showChoice}==true" >
+
+                <a href="/warehouse/add/new">
+                <div class="tile">
+                    Dodaj nowy element
+                </div></a>
+
+                <div class="tile">
+                    Aktualizuj liość
+                </div>
+            </div>
+                <div id="tiles3" style="clear: both" th:if="${newElement}==true">
+                    <a href="/wire">
+                        <div class="tile_small">
+                        Kable
+                    </div></a>
+                    <div class="tile_small">
+                        Trasy
+                    </div>
+                    <div class="tile_small">
+                        Złączki
+                    </div>
+
+                </div><br/>
+
+            <br/>
+
+        </center>
+    </div>
+
+
+    <div class="footer">
+        <h5> Wszystkie prawa zastrzeżone </h5>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<div class="title">
+    <a href="/warehouse">
+        <div id="logo">
+            <h1>Magazyn Elektryczny</h1>
+        </div>
+    </a>
+    <div id="date">
+        <h1>12:00</h1>
+    </div>
+</div>
+
+    <div class="content">
+        <center>
+            <form style="width: 70%" action="/wire" method="post" th:object="${wireForm}">
+            <div class="form">
+                <h3>Podaj typ: </h3><input th:field="*{type}" placeholder="ilość żył x przekrój" class="input">
+            </div>
+
+                <br/>
+            <div class="form">
+                <h3>Podaj długość: </h3> <input th:field="*{length}" placeholder="Podaj długość" class="input">
+            </div>
+            <br/>
+
+            <button type="submit" class="btn">Dodaj</button>
+        </form>
+        </center>
+    </div>
+
+</body>
+</html>
